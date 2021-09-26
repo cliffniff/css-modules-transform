@@ -4,6 +4,7 @@
     "description": "Transform css classes into css module syntax",
     "version": "0.0.1",
     "publisher": "cliffniff",
+    "icon": "static/icon.jpg",
     "engines": {
         "vscode": "^1.60.0"
     },
@@ -47,5 +48,6 @@
         "webpack": "^5.52.1",
         "webpack-cli": "^4.8.0",
         "@vscode/test-electron": "^1.6.2"
-    }
+    },
+    "repository": "github:cliffniff/css-modules-transform"
 }
