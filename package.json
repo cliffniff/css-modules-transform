@@ -2,7 +2,7 @@
     "name": "css-modules-transform",
     "displayName": "CSS Modules Transform",
     "description": "Transform css classes into css module syntax",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "cliffniff",
     "icon": "static/icon.jpg",
     "engines": {
@@ -12,7 +12,8 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:css-modules-transform.transformClasses"
+        "onCommand:css-modules-transform.transformClasses",
+        "*"
     ],
     "main": "./dist/extension.js",
     "contributes": {

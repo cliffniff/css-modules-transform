@@ -55,8 +55,8 @@ export const activate = (context: ExtensionContext) => {
         }
     );
 
-    context.subscriptions.push(transformClassCommand);
     context.subscriptions.push(fileSaveWatcher);
+    context.subscriptions.push(transformClassCommand);
 };
 
 export const deactivate = () => {};
