@@ -6,7 +6,6 @@ const allowedLanguages = ["javascript", "javascriptreact", "typescriptreact"];
 export const activate = (context: ExtensionContext) => {
     let fileSaveWatcher = workspace.onWillSaveTextDocument(({ document, waitUntil }) => {
         if (document.uri.scheme === "file" && allowedLanguages.includes(document.languageId)) {
-            console.log(document.languageId);
             waitUntil(commands.executeCommand("css-modules-transform.transformClasses", false));
         }
     });
@@ -19,7 +18,7 @@ export const activate = (context: ExtensionContext) => {
             if (editor) {
                 const styleVariable = editor.document
                     .getText()
-                    .match(/^.*?import\s(.*?)\sfrom\s['"].*?.module.css['"]/);
+                    .match(/^.*?import\s(.*?)\sfrom\s['"].*?.module.css['"]/m);
 
                 if (
                     !forced &&
