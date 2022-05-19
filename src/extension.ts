@@ -18,7 +18,7 @@ export const activate = (context: ExtensionContext) => {
             if (editor) {
                 const styleVariable = editor.document
                     .getText()
-                    .match(/^.*?import\s(.*?)\sfrom\s['"].*?.module.css['"]/m);
+                    .match(/^.*?import\s(.*?)\sfrom\s['"].*?.module.(css|scss)['"]/m);
 
                 if (
                     !forced &&
